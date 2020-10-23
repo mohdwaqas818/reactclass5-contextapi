@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import Parent from './Parent';
+import CounterContext from './CounterContext';
 import './App.css';
 
 function App() {
+  let number = useState(1); //its an array [0 num][1 fn]
+  console.log(number);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CounterContext.Provider value={number}>
+      <div>
+        <h1 className="title">Class5 Assignment - ContextApi</h1>
+        <Parent />
+      </div>
+    </CounterContext.Provider>
   );
 }
 
