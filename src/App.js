@@ -9,7 +9,7 @@ function App() {
   return (
     <CounterContext.Provider value={number}>
       <div>
-        <h1 className="title">React Class5 Assignment - ContextApis</h1>
+        <h1 className="title">React Class5 Assignment - ContextApi</h1>
         <Parent />
       </div>
     </CounterContext.Provider>
